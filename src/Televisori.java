@@ -9,6 +9,7 @@ public class Televisori extends Prodotto {
         this.isSmart = isSmart;
     }
 
+    // Getter e Setter
     public int getDimensioni() {
         return dimensioni;
     }
@@ -24,4 +25,13 @@ public class Televisori extends Prodotto {
     public void setSmart(boolean isSmart) {
         this.isSmart = isSmart;
     }
+
+    // Bonus
+    public float getPrezzoScontato() {
+        if (!isSmart) {
+            return getPrezzoIva() * 0.90f; // Sconto del 10%
+        }
+        return super.getPrezzoScontato(); // Sconto base del 2%
+    }
+
 }

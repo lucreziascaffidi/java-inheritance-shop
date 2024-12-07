@@ -9,6 +9,7 @@ public class Smartphone extends Prodotto {
         this.memoria = memoria;
     };
 
+    // Getter e Setter
     public String getImei() {
         return imei;
     }
@@ -25,4 +26,11 @@ public class Smartphone extends Prodotto {
         this.memoria = memoria;
     }
 
+    // Bonus
+    public float getPrezzoScontato() {
+        if (memoria < 32) {
+            return getPrezzoIva() * 0.95f;
+        }
+        return super.getPrezzoScontato();
+    }
 }

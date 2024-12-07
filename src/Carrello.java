@@ -21,6 +21,15 @@ public class Carrello {
         return totale;
     }
 
+    // Bonus
+    public float calcolaTotaleScontato() {
+        float totale = 0;
+        for (Prodotto prodotto : prodotti) {
+            totale += prodotto.getPrezzoScontato();
+        }
+        return totale;
+    }
+
     // Stampa il contenuto del carrello
     public void stampaCarrello() {
         System.out.println("Carrello:");

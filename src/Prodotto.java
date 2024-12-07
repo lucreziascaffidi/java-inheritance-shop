@@ -64,4 +64,8 @@ public class Prodotto {
         return prezzoProdotto + (prezzoProdotto * iva / 100);
     }
 
+    // Bonus per il calcolo del prezzo scontato, di base sempre del 2%
+    public float getPrezzoScontato() {
+        return getPrezzoIva() * 0.98f;
+    }
 }

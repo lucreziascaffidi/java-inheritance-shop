@@ -67,9 +67,19 @@ public class App {
             }
         }
 
+        // Bonus
+        System.out.println("\nHai una tessera fedeltà? (true/false)");
+        boolean hasFidelityCard = Boolean.parseBoolean(scanner.nextLine());
+
         // Stampa il contenuto del carrello
         System.out.println("\nRiepilogo del carrello:");
         carrello.stampaCarrello();
+
+        if (hasFidelityCard) {
+            System.out.println("Totale con sconto fedeltà: " + carrello.calcolaTotaleScontato() + "€");
+        } else {
+            System.out.println("Totale senza sconto: " + carrello.calcolaTotale() + "€");
+        }
 
         scanner.close();
     }
