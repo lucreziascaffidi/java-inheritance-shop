@@ -25,6 +25,8 @@ public class Cuffie extends Prodotto {
         this.isWireless = isWireless;
     }
 
+    // Bonus
+    @Override
     public float getPrezzoScontato() {
         if (!isWireless) {
             return getPrezzoIva() * 0.93f; // Sconto del 7%

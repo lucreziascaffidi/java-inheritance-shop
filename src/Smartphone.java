@@ -27,6 +27,7 @@ public class Smartphone extends Prodotto {
     }
 
     // Bonus
+    @Override
     public float getPrezzoScontato() {
         if (memoria < 32) {
             return getPrezzoIva() * 0.95f;

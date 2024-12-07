@@ -27,6 +27,7 @@ public class Televisori extends Prodotto {
     }
 
     // Bonus
+    @Override
     public float getPrezzoScontato() {
         if (!isSmart) {
             return getPrezzoIva() * 0.90f; // Sconto del 10%
