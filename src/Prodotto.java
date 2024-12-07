@@ -1,14 +1,17 @@
+import java.util.Random;
+
 public class Prodotto {
 
-    protected int codiceProdotto;
-    protected String nomeProdotto;
-    protected String marcaProdotto;
-    protected float prezzoProdotto;
-    protected float iva;
+    private int codiceProdotto;
+    private String nomeProdotto;
+    private String marcaProdotto;
+    private float prezzoProdotto;
+    private float iva;
 
     // Metodo Costruttore
-    public Prodotto(int codiceProdotto, String nomeProdotto, String marcaProdotto, float prezzoProdotto, float iva) {
-        this.codiceProdotto = codiceProdotto;
+    public Prodotto(String nomeProdotto, String marcaProdotto, float prezzoProdotto, float iva) {
+        Random random = new Random();
+        this.codiceProdotto = random.nextInt(7777777);
         this.nomeProdotto = nomeProdotto;
         this.marcaProdotto = marcaProdotto;
         this.prezzoProdotto = prezzoProdotto;
